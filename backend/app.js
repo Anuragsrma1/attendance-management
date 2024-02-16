@@ -1,15 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 
-const sequelize = require('./backend/UTIL/connectToDB');
+const sequelize = require('./UTIL/connectToDB');
 // const Date = require('./MODELS/Dates')
-const Attendence = require('./backend/MODELS/Attendence')
+const Attendence = require('./MODELS/Attendence')
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-const Routes = require('./backend/ROUTES/Attendence');
+const Routes = require('./ROUTES/Attendence');
 
 app.use(Routes);
 
